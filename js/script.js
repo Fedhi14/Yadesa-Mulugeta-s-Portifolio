@@ -142,4 +142,14 @@ document.addEventListener('DOMContentLoaded', function() {
             closeModal();
         }
     });
+
 });
+
+const viewWorkBtn = document.querySelector('.btn[data-page="projects"]');
+if (viewWorkBtn) {
+    viewWorkBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        // Trigger click on the projects nav link
+        document.querySelector('.nav-link[data-page="projects"]').click();
+    });
+}
